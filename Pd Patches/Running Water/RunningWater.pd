@@ -1,0 +1,124 @@
+#N canvas 148 33 1131 720 10;
+#X obj 288 616 output~;
+#X obj 544 61 hsl 128 15 0 1 0 0 high1 empty High1 50 8 0 10 -258113
+-1 -1 692 1;
+#X obj 544 81 hsl 128 15 0 1 0 0 high2 empty High2 50 8 0 10 -258113
+-1 -1 12700 1;
+#X obj 544 101 hsl 128 15 0 1 0 0 high3 empty High3 50 8 0 10 -258113
+-1 -1 1184 1;
+#X obj 726 43 r high1;
+#X floatatom 676 60 5 0 0 0 - - -;
+#X floatatom 676 80 5 0 0 0 - - -;
+#X floatatom 676 100 5 0 0 0 - - -;
+#X obj 726 63 r high2;
+#X obj 726 83 r high3;
+#X obj 544 121 hsl 128 15 0 4 0 0 high4 empty High4 50 8 0 10 -258113
+-1 -1 9800 1;
+#X floatatom 676 121 5 0 0 0 - - -;
+#X obj 726 104 r high4;
+#X obj 544 141 hsl 128 15 0 10 0 0 mid1 empty Mid1 50 8 0 10 -260097
+-1 -1 1599 1;
+#X floatatom 676 141 5 0 0 0 - - -;
+#X obj 726 124 r mid1;
+#X obj 544 161 hsl 128 15 0 1 0 0 mid2 empty Mid2 50 8 0 10 -260097
+-1 -1 1892 1;
+#X floatatom 676 161 5 0 0 0 - - -;
+#X obj 726 144 r mid2;
+#X obj 544 181 hsl 128 15 0 1 0 0 mid3 empty Mid3 50 8 0 10 -260097
+-1 -1 2489 1;
+#X floatatom 676 181 5 0 0 0 - - -;
+#X obj 726 164 r mid3;
+#X obj 308 372 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 544 201 hsl 128 15 0 0.02 0 0 noise empty Noise1 50 8 0 10 -257985
+-1 -1 11315 1;
+#X floatatom 676 201 5 0 0 0 - - -;
+#X obj 726 184 r noise;
+#X obj 544 221 hsl 128 15 0 5 0 0 noise2 empty Noise2 50 8 0 10 -257985
+-1 -1 1200 1;
+#X floatatom 676 221 5 0 0 0 - - -;
+#X obj 726 204 r noise2;
+#X obj 396 552 delread~ water2 30;
+#X obj 537 500 delwrite~ water2 30;
+#X obj 153 558 delread~ water1 30;
+#X obj 29 460 delwrite~ water1 30;
+#X obj 544 241 hsl 128 15 0 10 0 0 noise3 empty Noise3 50 8 0 10 -257985
+-1 -1 4700 1;
+#X floatatom 676 241 5 0 0 0 - - -;
+#X obj 726 224 r noise3;
+#X obj 304 416 waterflow1;
+#X obj 544 261 hsl 128 15 0 10 0 0 farnflow empty Farnflow 50 8 0 10
+-4034 -1 -1 999 1;
+#X floatatom 676 261 5 0 0 0 - - -;
+#X obj 726 244 r farnflow;
+#X obj 498 420 waterflow1;
+#X obj 115 419 waterflow1;
+#X obj 567 421 running_water2;
+#X obj 659 422 running_water2;
+#X obj 54 396 running_water2;
+#X obj 326 441 running_water2;
+#X obj 30 372 running_water2;
+#X msg 494 79 1;
+#X msg 494 139 1.259;
+#X msg 494 159 0.149;
+#X msg 494 179 0.196;
+#X obj 391 530 delread~ water1 0;
+#X obj 264 523 delread~ water2 0;
+#X obj 435 585 knob 32 32 10000 100 0 0 empty empty empty 0 -8 0 8
+-262144 -1 -1 1200 1;
+#X floatatom 439 634 5 0 0 0 - - -;
+#X obj 346 597 lop~;
+#X obj 288 597 lop~;
+#X msg 494 59 0.054;
+#X msg 494 99 0.093;
+#X msg 494 119 3.086;
+#X msg 494 199 0.017;
+#X msg 494 219 0.472;
+#X msg 494 239 3.7;
+#X msg 494 259 0.786;
+#X msg 483 586 6167;
+#X connect 4 0 5 0;
+#X connect 8 0 6 0;
+#X connect 9 0 7 0;
+#X connect 12 0 11 0;
+#X connect 15 0 14 0;
+#X connect 18 0 17 0;
+#X connect 21 0 20 0;
+#X connect 22 0 36 0;
+#X connect 22 0 40 0;
+#X connect 22 0 41 0;
+#X connect 25 0 24 0;
+#X connect 28 0 27 0;
+#X connect 29 0 55 0;
+#X connect 31 0 56 0;
+#X connect 35 0 34 0;
+#X connect 36 0 55 0;
+#X connect 36 0 56 0;
+#X connect 39 0 38 0;
+#X connect 40 0 30 0;
+#X connect 41 0 32 0;
+#X connect 42 0 30 0;
+#X connect 43 0 30 0;
+#X connect 44 0 32 0;
+#X connect 45 0 55 0;
+#X connect 45 0 56 0;
+#X connect 46 0 32 0;
+#X connect 47 0 2 0;
+#X connect 48 0 13 0;
+#X connect 49 0 16 0;
+#X connect 50 0 19 0;
+#X connect 51 0 55 0;
+#X connect 52 0 56 0;
+#X connect 53 0 54 0;
+#X connect 53 0 55 1;
+#X connect 53 0 56 1;
+#X connect 55 0 0 1;
+#X connect 56 0 0 0;
+#X connect 57 0 1 0;
+#X connect 58 0 3 0;
+#X connect 59 0 10 0;
+#X connect 60 0 23 0;
+#X connect 61 0 26 0;
+#X connect 62 0 33 0;
+#X connect 63 0 37 0;
+#X connect 64 0 53 0;
