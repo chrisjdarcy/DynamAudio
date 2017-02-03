@@ -1,0 +1,19 @@
+#N canvas 965 23 701 753 12;
+#N canvas 0 50 450 300 (subpatch) 0;
+#X array Left 617400 float 2;
+#X coords 0 1 617400 -1 200 140 1 0 0;
+#X restore 60 89 graph;
+#N canvas 0 50 450 300 (subpatch) 0;
+#X array Right 617400 float 2;
+#X coords 0 1 617400 -1 200 140 1 0 0;
+#X restore 59 275 graph;
+#X obj 332 66 bng 40 250 50 0 empty empty empty 17 7 0 10 -4034 -1
+-1;
+#X obj 332 149 openpanel;
+#X obj 332 381 soundfiler;
+#X msg 332 291 read -resize \$1 Left Right;
+#X obj 368 201 print;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 3 0 6 0;
+#X connect 5 0 4 0;

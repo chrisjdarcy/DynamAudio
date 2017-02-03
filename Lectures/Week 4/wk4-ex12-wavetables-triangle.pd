@@ -1,0 +1,126 @@
+#N canvas 515 90 1215 632 12;
+#X obj 179 120 mtof;
+#X obj 175 423 *~;
+#X obj 193 398 line~;
+#X obj 193 373 pack 0 50;
+#X obj 193 320 / 127;
+#X floatatom 184 92 5 0 0 0 - - -;
+#X floatatom 200 351 5 0 0 0 - - -;
+#X obj 278 384 cnv 15 200 100 empty empty Turn_DSP_on_and_off 20 12
+0 12 -258113 -1 0;
+#X msg 373 418 \; pd dsp 0;
+#X text 297 460 AUDIO ON;
+#X text 372 460 AUDIO OFF;
+#X obj 491 356 vsl 30 128 0 127 0 0 empty empty Volume 0 -9 0 12 -159808
+-4034 -1 0 1;
+#X obj 491 494 s vol;
+#X obj 193 291 r vol;
+#X obj 546 358 vsl 30 128 0 127 0 0 empty empty MIDI_note 0 -9 0 12
+-260097 -4034 -1 0 1;
+#X obj 546 494 s note;
+#X obj 179 61 r note;
+#X obj 127 472 dac~;
+#X msg 299 417 \; pd dsp 1;
+#X msg 700 60 \; wavetable_1 sinesum 2051 1;
+#X msg 475 56 \; wavetable_1 normalize 1;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array E02-spectrum 128 float 0;
+#X coords 0 4300 127 -40 257 130 1;
+#X restore 706 531 graph;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array F05-signal 882 float 0;
+#X coords 0 1 882 -1 200 130 1;
+#X restore 709 380 graph;
+#X obj 296 527 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#N canvas 45 83 558 569 fft 0;
+#X obj 19 61 inlet~;
+#X obj 95 214 inlet;
+#X obj 29 92 rfft~;
+#X obj 29 125 *~;
+#X obj 60 125 *~;
+#X obj 29 155 sqrt~;
+#X obj 332 109 block~ 4096 1;
+#X obj 29 181 biquad~ 0 0 0 0 1;
+#X text 93 93 Fourier series;
+#X text 98 146 magnitude;
+#X text 96 131 calculate;
+#X text 21 3 This subpatch computes the spectrum of the incoming signal
+with a (rectangular windowed) FFT. FFTs aren't properly introduced
+until much later.;
+#X text 83 61 signal to analyze;
+#X text 192 166 delay two samples;
+#X text 191 182 for better graphing;
+#X obj 16 425 samplerate~;
+#X obj 16 402 bng 18 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+-1;
+#X floatatom 16 472 5 0 0 0 - - -;
+#X obj 16 448 / 256;
+#X obj 16 378 loadbang;
+#X floatatom 16 541 5 0 0 0 - - -;
+#X obj 24 494 s fundamental;
+#X obj 16 517 ftom;
+#X text 14 319 At load time \, calculate a good choice of fundamental
+frequency for showing spectra: the 16th bin in a 4096-point spectrum
+\, so SR*16/4096 or SR/256.;
+#X text 145 216 "bang" into this inlet to graph it;
+#X floatatom 191 480 5 0 0 0 - - -;
+#X obj 191 456 / 4096;
+#X text 187 425 One bin is SR/4096:;
+#X text 72 540 <-just out of curiosity \, here's the fundamental pitch
+;
+#X obj 191 502 s freq-step;
+#X obj 95 248 tabwrite~ E02-spectrum;
+#X obj 20 281 tabwrite~ F05-signal;
+#X connect 0 0 2 0;
+#X connect 0 0 31 0;
+#X connect 1 0 30 0;
+#X connect 1 0 31 0;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;
+#X connect 2 1 4 0;
+#X connect 2 1 4 1;
+#X connect 3 0 5 0;
+#X connect 4 0 5 0;
+#X connect 5 0 7 0;
+#X connect 7 0 30 0;
+#X connect 15 0 18 0;
+#X connect 15 0 26 0;
+#X connect 16 0 15 0;
+#X connect 17 0 21 0;
+#X connect 17 0 22 0;
+#X connect 18 0 17 0;
+#X connect 19 0 16 0;
+#X connect 22 0 20 0;
+#X connect 25 0 29 0;
+#X connect 26 0 25 0;
+#X restore 257 592 pd fft;
+#X obj 296 560 metro 200;
+#X text 322 526 Click to start and stop metro and thus display;
+#X obj 179 180 tabosc4~ wavetable_1;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array wavetable_1 2051 float 0;
+#X coords 0 1 2050 -1 200 140 1 0 0;
+#X restore 259 223 graph;
+#X msg 701 286 \; wavetable_1 sinesum 2051 1 0 -0.111 0 0.04 0 -0.0204
+0 0.0123 0 -0.0083 0;
+#X msg 698 111 \; wavetable_1 sinesum 2051 1 0 -0.111;
+#X msg 697 167 \; wavetable_1 sinesum 2051 1 0 -0.111 0 0.04;
+#X msg 697 224 \; wavetable_1 sinesum 2051 1 0 -0.111 0 0.04 0 -0.0204
+;
+#X connect 0 0 27 0;
+#X connect 1 0 17 0;
+#X connect 1 0 17 1;
+#X connect 1 0 24 0;
+#X connect 2 0 1 1;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 4 0 6 0;
+#X connect 11 0 12 0;
+#X connect 13 0 4 0;
+#X connect 14 0 15 0;
+#X connect 16 0 0 0;
+#X connect 16 0 5 0;
+#X connect 23 0 25 0;
+#X connect 25 0 24 1;
+#X connect 27 0 1 0;

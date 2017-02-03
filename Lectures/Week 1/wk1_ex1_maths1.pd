@@ -1,0 +1,50 @@
+#N canvas 77 23 1603 957 24;
+#X obj 582 342 randomF 1;
+#X text 786 303 Generate a random floating point number between 0 and
+1 NB: May not be available if you have not installed extended PD -
+think about using 'random' object instead (generates random integers)
+;
+#X obj 294 602 + 1000;
+#X obj 706 602 * 27.3;
+#X obj 914 598 / 2.4;
+#X obj 512 602 - 33.333;
+#X text 1050 593 Be careful to leave a space between operator and value!
+;
+#X msg 582 156 bang;
+#X floatatom 294 722 10 0 0 0 - - -;
+#X floatatom 512 724 10 0 0 0 - - -;
+#X floatatom 706 722 10 0 0 0 - - -;
+#X floatatom 914 722 10 0 0 0 - - -;
+#X text 1122 723 Number boxes display results;
+#X floatatom 338 414 10 0 0 0 - - -;
+#X text 678 155 Generate single pseudorandom number;
+#X text -187 415 pseudorandom number between 0 and 1;
+#X obj -455 0 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 364 1068 +;
+#X floatatom 364 970 5 0 0 0 - - -;
+#X floatatom 472 972 5 0 0 0 - - -;
+#X floatatom 364 1200 5 0 0 0 - - -;
+#X msg 254 968 bang;
+#X text 504 1071 Here + adds the numbers presented to the left and
+right inlets. However \, remember that the result only appears when
+the right inlet receives a message!;
+#X text -251 601 These examples use creation arguments;
+#X text 668 1 Maths 1 - Arithmetic;
+#X obj 528 160 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 2 0;
+#X connect 0 0 3 0;
+#X connect 0 0 4 0;
+#X connect 0 0 5 0;
+#X connect 0 0 13 0;
+#X connect 2 0 8 0;
+#X connect 3 0 10 0;
+#X connect 4 0 11 0;
+#X connect 5 0 9 0;
+#X connect 7 0 0 0;
+#X connect 17 0 20 0;
+#X connect 18 0 17 0;
+#X connect 19 0 17 1;
+#X connect 21 0 17 0;
+#X connect 25 0 0 0;

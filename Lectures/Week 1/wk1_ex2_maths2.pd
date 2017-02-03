@@ -1,0 +1,22 @@
+#N canvas 275 195 1080 586 24;
+#X obj 460 358 min;
+#X floatatom 518 262 5 0 0 0 - - -;
+#X floatatom 632 260 5 0 0 0 - - -;
+#X floatatom 460 478 5 0 0 0 - - -;
+#X obj 698 360 max;
+#X floatatom 698 476 5 0 0 0 - - -;
+#X msg 400 260 bang;
+#X text 436 609 min returns the minimum of two number max the maximum
+of two numbers. Don't forget there is no result unless a message is
+received on the left inlet!;
+#X text 386 189 bang to get result if you change right inlet value.
+;
+#X text 448 59 Maths 2 - min and max;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 1 0 4 0;
+#X connect 2 0 0 1;
+#X connect 2 0 4 1;
+#X connect 4 0 5 0;
+#X connect 6 0 0 0;
+#X connect 6 0 4 0;

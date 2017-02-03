@@ -1,0 +1,22 @@
+#N canvas 123 119 828 597 12;
+#X obj 147 188 mtof;
+#X obj 138 279 dac~;
+#X msg 136 311 \; pd dsp 1;
+#X msg 223 312 \; pd dsp 0;
+#X text 305 322 Turn DSP on (1) or off (0);
+#X obj 147 221 osc~;
+#X obj 150 135 hsl 128 15 0 127 0 0 empty empty Midi-note -2 -8 0 10
+-257985 -1 -1 0 1;
+#X obj 282 51 cnv 15 250 26 empty empty Basic_Sine_Wave_Oscillator
+20 12 0 14 -257985 -66577 0;
+#X text 194 216 Oscillator (cosine wave) A creation argument would
+set an initial frequency. Rightmost inlet resets phase.;
+#X text 193 267 Output sound (remember this defaults to 2-channel thus
+the two inlets!);
+#X text 193 190 convert midi note numbers to frequency in Hz;
+#X text 285 127 Slider by default outputs a number from 0 - 127 In
+this example handy as midi note numbers range from 0 - 127 too.;
+#X connect 0 0 5 0;
+#X connect 5 0 1 0;
+#X connect 5 0 1 1;
+#X connect 6 0 0 0;

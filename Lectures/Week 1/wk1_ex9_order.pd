@@ -1,0 +1,24 @@
+#N canvas 473 149 958 786 12;
+#X obj 171 271 print out1;
+#X obj 257 271 print out2;
+#X obj 348 271 print out3;
+#X text 371 50 Order of connections;
+#X text 399 198 It is impossible to tell from just looking what the
+order of printing will be!;
+#X msg 274 157 Which order?;
+#X obj 328 595 print out1;
+#X obj 439 594 print out2;
+#X obj 543 594 print out3;
+#X msg 364 429 bang;
+#X obj 364 489 trigger bang bang bang;
+#X text 567 480 In this case trigger sends 3 bangs in reverse order:
+3 \, 2 and 1 (i.e. right to left). Thus we can guarantee the correct
+order;
+#X text 572 555 NB: there is no delay!;
+#X connect 5 0 2 0;
+#X connect 5 0 0 0;
+#X connect 5 0 1 0;
+#X connect 9 0 10 0;
+#X connect 10 0 6 0;
+#X connect 10 1 7 0;
+#X connect 10 2 8 0;

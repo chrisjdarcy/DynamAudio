@@ -1,0 +1,18 @@
+#N canvas 280 208 963 471 10;
+#X obj 192 102 == 100;
+#X floatatom 192 55 5 0 0 0 - - -;
+#X floatatom 167 148 5 0 0 0 - - -;
+#X obj 234 149 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 290 102 Relational operators output a boolean value (true or
+false represented by 1 or 0). In this case when the leftmost inlet
+is equal to 100 == will output a 1 Every other time a 0 is output.
+Note that a value is output everytime a message is received!;
+#X text -165 96 This example uses a creation argument but we can use
+the right inlet for the number to compare instead;
+#X obj -210 -4 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 182 4 Maths 4 - relational operators;
+#X connect 0 0 2 0;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;

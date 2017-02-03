@@ -1,0 +1,32 @@
+#N canvas 374 235 855 557 12;
+#X text 330 21 Counter;
+#X msg 261 76 bang;
+#X text 43 134 Float object stores a number;
+#X msg 199 76 0;
+#X text 79 49 Reset counter;
+#X text 310 75 Each bang increments counter by 1;
+#X text 328 202 Counter output;
+#X text 379 110 Take output of float \, add one and store on rightmost
+inlet of float. No loop is created since result is processed only when
+message is received on 1st inlet.;
+#X obj 261 135 float;
+#X obj 329 135 + 1;
+#X floatatom 261 203 5 0 0 0 - - -;
+#X obj 290 363 float;
+#X msg 290 292 bang;
+#X msg 228 292 0;
+#X floatatom 290 426 5 0 0 0 - - -;
+#X obj 359 363 + 1;
+#X text 444 289 This is WRONG and will cause a stack overflow (and/or
+PD will crash!). By using the 1st inlet we create an infinite loop.
+;
+#X connect 1 0 8 0;
+#X connect 3 0 8 0;
+#X connect 8 0 9 0;
+#X connect 8 0 10 0;
+#X connect 9 0 8 1;
+#X connect 11 0 14 0;
+#X connect 11 0 15 0;
+#X connect 12 0 11 0;
+#X connect 13 0 11 0;
+#X connect 15 0 11 0;

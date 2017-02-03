@@ -1,0 +1,26 @@
+#N canvas 410 269 657 460 10;
+#X obj 263 276 osc~;
+#X obj 263 207 mtof;
+#X obj 263 137 random 127;
+#X obj 263 361 dac~;
+#X msg 261 393 \; pd dsp 1;
+#X msg 348 394 \; pd dsp 0;
+#X text 360 359 Output sound;
+#X text 452 402 Turn DSP on (1) or off (0);
+#X obj 263 326 *~ 0.2;
+#X text 361 322 scale output;
+#X obj 263 82 metro 500;
+#X obj 263 54 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 363 51 Bang metro to start;
+#X text 364 81 generate bang every 0.5 seconds;
+#X text 364 136 Make a random number between 0 and 127;
+#X text 363 207 Convert midi note to frequency;
+#X text 363 277 Oscillator;
+#X connect 0 0 8 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 8 0 3 0;
+#X connect 8 0 3 1;
+#X connect 10 0 2 0;
+#X connect 11 0 10 0;

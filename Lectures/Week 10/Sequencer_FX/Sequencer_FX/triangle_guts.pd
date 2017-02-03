@@ -1,0 +1,14 @@
+#N canvas 572 186 450 300 10;
+#X obj 51 13 expr~ if($v1 < 0.5 \, $v1 \, 1-$v1);
+#X obj 51 43 -~ 0.25;
+#X obj 51 72 *~ 4;
+#X obj 51 -41 mtof~;
+#X obj 51 -16 phasor~;
+#X obj 51 100 outlet~;
+#X obj 51 -73 inlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 6 0 3 0;

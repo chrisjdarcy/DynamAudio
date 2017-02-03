@@ -1,0 +1,13 @@
+#N canvas 511 228 647 487 10;
+#X floatatom 194 129 5 0 0 0 - - -;
+#X obj 219 188 mod 10;
+#X floatatom 219 262 5 0 0 0 - - -;
+#X obj 149 186 div 10;
+#X floatatom 149 261 5 0 0 0 - - -;
+#X text 286 186 div returns division of two integers without the remainder.
+mod returns the remainder.;
+#X text 229 53 Maths 3 - div and mod;
+#X connect 0 0 1 0;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;

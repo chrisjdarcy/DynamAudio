@@ -1,0 +1,21 @@
+#N canvas 299 49 987 801 10;
+#X obj 106 319 pack 0 50;
+#X obj 106 106 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -4032
+-1 -1 4300 1;
+#X obj 106 268 / 127;
+#X obj 236 566 outlet~;
+#X obj 287 566 outlet~;
+#X obj 236 268 catch~ Reverb;
+#X obj 236 423 freeverb~;
+#X msg 106 376 roomsize \$1;
+#X obj 106 350 line;
+#X connect 0 0 8 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 5 0 6 0;
+#X connect 5 0 6 1;
+#X connect 6 0 3 0;
+#X connect 6 1 4 0;
+#X connect 7 0 6 0;
+#X connect 8 0 7 0;
+#X coords 0 -1 1 1 50 150 2 100 100;

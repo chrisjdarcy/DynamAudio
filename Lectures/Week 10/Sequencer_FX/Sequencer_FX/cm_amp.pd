@@ -1,0 +1,8 @@
+#N canvas 838 422 292 395 10;
+#X obj 107 107 vsl 15 127 0 126 0 0 empty empty empty 0 -9 0 10 -4034
+-1 -1 0 1;
+#X obj 107 287 send \$1_amp;
+#X obj 107 263 / 127;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X coords 0 -1 1 1 30 150 2 100 100;

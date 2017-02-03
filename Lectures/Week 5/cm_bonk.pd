@@ -1,0 +1,27 @@
+#N canvas 204 129 814 691 10;
+#X obj 398 219 bonk~;
+#X obj 398 291 bng 40 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 432 154 minvel \$1;
+#X floatatom 426 95 5 0 0 0 - - -;
+#X obj 315 536 dac~;
+#X obj 302 372 noise~;
+#X obj 303 404 *~;
+#X obj 398 377 vline~;
+#X msg 398 348 1 50 \, 0 100 50;
+#X obj 359 44 adc~;
+#X obj 398 258 spigot;
+#X obj 470 209 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X connect 0 0 10 0;
+#X connect 1 0 8 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 6 0 4 1;
+#X connect 7 0 6 1;
+#X connect 8 0 7 0;
+#X connect 9 0 0 0;
+#X connect 10 0 1 0;
+#X connect 11 0 10 1;

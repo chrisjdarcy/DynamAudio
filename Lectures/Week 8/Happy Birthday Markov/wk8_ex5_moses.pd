@@ -1,0 +1,17 @@
+#N canvas 905 334 566 437 24;
+#X obj 217 29 tgl 45 0 empty empty empty 17 7 0 10 -4032 -1 -1 0 1
+;
+#X obj 217 135 metro 500;
+#X obj 217 222 random 100;
+#X obj 217 262 moses 10;
+#X obj 183 307 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 334 303 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 170 322 <10;
+#X text 331 323 >10;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 1 5 0;

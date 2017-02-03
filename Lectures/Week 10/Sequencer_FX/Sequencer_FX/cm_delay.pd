@@ -1,0 +1,55 @@
+#N canvas 342 23 987 801 10;
+#X obj 356 95 delwrite~ test 1000;
+#X floatatom 482 272 5 0 0 0 - - -;
+#X obj 599 465 *~;
+#X obj 629 391 pack 0 50;
+#X obj 106 106 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -4032
+-1 -1 1500 1;
+#X obj 629 354 / 127;
+#X obj 629 422 line~;
+#X obj 482 317 delread~ test;
+#X obj 356 64 receive~ \$0-delayFeedback;
+#X obj 599 506 send~ \$0-delayFeedback;
+#X obj 517 89 r tempo;
+#X obj 128 105 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 128 127 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 128 149 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 287 571 outlet~;
+#X obj 459 559 outlet~;
+#X obj 283 14 catch~ delayLine;
+#X obj 618 203 t b f;
+#X obj 614 136 t b f;
+#X obj 610 55 t b f;
+#X obj 521 231 * 3;
+#X msg 610 32 3;
+#X msg 614 108 4;
+#X msg 618 181 7;
+#X connect 1 0 7 0;
+#X connect 2 0 9 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X connect 6 0 2 1;
+#X connect 7 0 2 0;
+#X connect 7 0 15 0;
+#X connect 7 0 14 0;
+#X connect 8 0 0 0;
+#X connect 10 0 20 0;
+#X connect 11 0 21 0;
+#X connect 12 0 22 0;
+#X connect 13 0 23 0;
+#X connect 16 0 0 0;
+#X connect 17 0 20 0;
+#X connect 17 1 20 1;
+#X connect 18 0 20 0;
+#X connect 18 1 20 1;
+#X connect 19 0 20 0;
+#X connect 19 1 20 1;
+#X connect 20 0 1 0;
+#X connect 21 0 19 0;
+#X connect 22 0 18 0;
+#X connect 23 0 17 0;
+#X coords 0 -1 1 1 50 150 2 100 100;

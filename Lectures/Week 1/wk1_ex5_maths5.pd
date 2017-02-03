@@ -1,0 +1,20 @@
+#N canvas 493 277 589 362 10;
+#X obj 148 110 mtof;
+#X obj 151 60 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 148 148 5 0 0 0 - - -;
+#X obj 222 149 ftom;
+#X floatatom 222 205 5 0 0 0 - - -;
+#X floatatom 222 92 5 0 0 0 - - -;
+#X text 280 112 mtof converts midi note values into frequencies (in
+Hz);
+#X text 280 152 ftom does the reverse \, taking a frequency in Hz and
+converting it to a midi note;
+#X text 296 50 slider sends a value from 0 to 127 representing a midi
+note value;
+#X text 236 18 Maths 5 - mtof and ftom;
+#X connect 0 0 2 0;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 1 0 5 0;
+#X connect 3 0 4 0;

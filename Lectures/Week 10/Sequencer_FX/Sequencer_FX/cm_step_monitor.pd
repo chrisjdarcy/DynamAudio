@@ -1,0 +1,34 @@
+#N canvas 269 70 567 209 10;
+#X obj 111 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 134 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 157 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 181 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 205 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 227 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 250 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 273 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -2 -13 r stepOne;
+#X obj 61 -13 r stepTwo;
+#X obj 124 -13 r stepThree;
+#X obj 199 -13 r stepFour;
+#X obj 269 -13 r stepFive;
+#X obj 339 -13 r stepSix;
+#X obj 403 -13 r stepSeven;
+#X obj 479 -13 r stepEight;
+#X connect 8 0 0 0;
+#X connect 9 0 1 0;
+#X connect 10 0 2 0;
+#X connect 11 0 3 0;
+#X connect 12 0 4 0;
+#X connect 13 0 5 0;
+#X connect 14 0 6 0;
+#X connect 15 0 7 0;
+#X coords 0 -1 1 1 200 30 2 100 100;
