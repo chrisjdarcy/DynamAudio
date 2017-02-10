@@ -1,12 +1,10 @@
 #N canvas 984 139 828 597 12;
-#X obj 149 493 dac~;
 #X msg 413 455 \; pd dsp 1;
 #X msg 500 456 \; pd dsp 0;
 #X text 582 466 Turn DSP on (1) or off (0);
 #X obj 146 320 osc~;
 #X obj 26 14 cnv 15 250 26 empty empty FM_Synthesis 20 12 0 14 -257985
 -66577 0;
-#X floatatom 82 177 5 0 0 0 - - -;
 #X obj 146 279 +~;
 #X obj 219 185 *~;
 #X obj 219 147 osc~;
@@ -15,13 +13,6 @@
 #X text 74 152 carrier;
 #X text 213 86 modulator;
 #X text 325 164 index;
-#X obj 146 435 *~;
-#X obj 221 406 line~;
-#X obj 221 373 pack 0 50;
-#X obj 221 316 / 127;
-#X obj 224 290 hsl 128 15 0 127 0 0 empty empty Volume -2 -8 0 10 -260097
--1 -1 6800 1;
-#X floatatom 237 345 5 0 0 0 - - -;
 #X obj 291 433 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 45 83 558 569 fft 0;
@@ -95,21 +86,19 @@ frequency for showing spectra: the 16th bin in a 4096-point spectrum
 #X coords 0 1 882 -1 200 130 1;
 #X restore 416 106 graph;
 #X obj 291 466 metro 200;
-#X text 214 47;
-#X connect 4 0 15 0;
-#X connect 6 0 7 0;
-#X connect 7 0 4 0;
-#X connect 8 0 7 1;
-#X connect 9 0 8 0;
-#X connect 10 0 9 0;
-#X connect 11 0 8 1;
-#X connect 15 0 0 0;
-#X connect 15 0 0 1;
-#X connect 15 0 22 0;
-#X connect 16 0 15 1;
-#X connect 17 0 16 0;
-#X connect 18 0 17 0;
-#X connect 18 0 20 0;
-#X connect 19 0 18 0;
-#X connect 21 0 25 0;
-#X connect 25 0 22 1;
+#X obj 219 56 inlet modulator;
+#X obj 356 66 inlet index;
+#X obj 146 513 outlet~ fm;
+#X obj 46 77 inlet~ carrier;
+#X connect 3 0 14 0;
+#X connect 3 0 20 0;
+#X connect 5 0 3 0;
+#X connect 6 0 5 1;
+#X connect 7 0 6 0;
+#X connect 8 0 7 0;
+#X connect 9 0 6 1;
+#X connect 13 0 17 0;
+#X connect 17 0 14 1;
+#X connect 18 0 8 0;
+#X connect 19 0 9 0;
+#X connect 21 0 5 0;
