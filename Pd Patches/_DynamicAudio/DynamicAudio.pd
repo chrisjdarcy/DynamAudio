@@ -32,6 +32,7 @@
 #X obj 629 232 WavesModule;
 #X obj 837 232 WavesModule;
 #X obj 1202 353 delwrite~ thunder 130;
+#X obj 317 99 RainModule;
 #X connect 0 0 6 0;
 #X connect 0 1 6 0;
 #X connect 0 2 6 0;
