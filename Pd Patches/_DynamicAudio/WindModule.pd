@@ -387,7 +387,7 @@
 #X obj 306 480 r gust8;
 #X obj 471 457 r gust1;
 #X obj 602 460 r gust2;
-#X obj 964 59 inlet;
+#X obj 634 59 inlet;
 #X obj -462 136 *~ 0.3;
 #X obj -166 116 *~ 0.3;
 #X obj 130 96 *~ 0.3;
