@@ -134,7 +134,7 @@ GameObject:
   - 224: {fileID: 26917023}
   - 114: {fileID: 26917024}
   m_Layer: 5
-  m_Name: Slider (1)
+  m_Name: WindSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -423,7 +423,7 @@ GameObject:
   - 224: {fileID: 183894327}
   - 114: {fileID: 183894328}
   m_Layer: 5
-  m_Name: Slider (5)
+  m_Name: FireSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -508,7 +508,7 @@ GameObject:
   - 224: {fileID: 196521703}
   - 114: {fileID: 196521704}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: ShoreSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -627,7 +627,7 @@ GameObject:
   - 224: {fileID: 290789846}
   - 114: {fileID: 290789847}
   m_Layer: 5
-  m_Name: Slider (2)
+  m_Name: RainSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1494,7 +1494,7 @@ GameObject:
   - 224: {fileID: 928299984}
   - 114: {fileID: 928299985}
   m_Layer: 5
-  m_Name: Slider (3)
+  m_Name: ThunderSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2155,7 +2155,7 @@ GameObject:
   - 224: {fileID: 1641799985}
   - 114: {fileID: 1641799986}
   m_Layer: 5
-  m_Name: Slider (4)
+  m_Name: RiverSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2274,7 +2274,7 @@ GameObject:
   - 224: {fileID: 1654449321}
   - 114: {fileID: 1654449322}
   m_Layer: 5
-  m_Name: Slider (7)
+  m_Name: MusicSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2461,7 +2461,7 @@ GameObject:
   - 224: {fileID: 1685903707}
   - 114: {fileID: 1685903708}
   m_Layer: 5
-  m_Name: Slider (6)
+  m_Name: BirdsSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
