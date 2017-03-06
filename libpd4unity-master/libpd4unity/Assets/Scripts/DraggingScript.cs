@@ -18,6 +18,13 @@ public class DraggingScript : MonoBehaviour
 
 	public bool draggingMode = false;
 
+	public float xMin;
+	public float xMax;
+	public float yMin;
+	public float yMax;
+
+	public float transformControly;
+	public float transformControlx;
 
 	// Use this for initialization
 	void Start()
@@ -28,6 +35,9 @@ public class DraggingScript : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+
+		transformControlx = Mathf.Clamp01(Mathf.Abs(((Mathf.Clamp(newGOCenter.x, xMin, xMax) - 4.1f) / 3.1f)));
+		transformControly = Mathf.Clamp01(Mathf.Abs(((Mathf.Clamp(newGOCenter.y, yMin, yMax) + 0.4f) / 3.3f)));
 
 		//***********************
 		// *** CLICK TO DRAG ****
@@ -58,7 +68,7 @@ public class DraggingScript : MonoBehaviour
 			{
 				touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 				newGOCenter = touchPosition - offset;
-				gameObjectTodrag.transform.position = new Vector3(newGOCenter.x, newGOCenter.y, GOcenter.z);
+				gameObjectTodrag.transform.position = new Vector3(Mathf.Clamp(newGOCenter.x, xMin, xMax), Mathf.Clamp(newGOCenter.y, yMin, yMax), GOcenter.z);
 			}
 		}
 
@@ -98,7 +108,7 @@ public class DraggingScript : MonoBehaviour
 				{
 					touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 					newGOCenter = touchPosition - offset;
-					gameObjectTodrag.transform.position = new Vector3(newGOCenter.x, newGOCenter.y, GOcenter.z);
+					gameObjectTodrag.transform.position = new Vector3(Mathf.Clamp(newGOCenter.x, xMin, xMax), Mathf.Clamp(newGOCenter.y, yMin, yMax), GOcenter.z);
 				}
 				break;
 
