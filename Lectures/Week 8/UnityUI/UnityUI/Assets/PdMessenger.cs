@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PdMessenger : MonoBehaviour {
 
   
-	float fToggleValue;
+	public float fToggleValue;
 
 
 
@@ -17,7 +17,12 @@ public class PdMessenger : MonoBehaviour {
 
 	}
 		
+	public void Sendhello(float hello){
 
+		LibPD.SendFloat ("Hello", hello);
+
+
+	}
 
 	public void SendToggleValue(bool toggleValue){
 
