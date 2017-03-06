@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using LibPDBinding;
 using System.Collections;
 
 public class DraggingScript : MonoBehaviour
@@ -29,6 +30,56 @@ public class DraggingScript : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+
+	}
+
+
+	public void SendBirdValue(float transformControly){
+
+		LibPD.SendFloat ("BirdsLevel", transformControly);
+
+
+	}
+
+	public void SendWindValue(float transformControly){
+
+		LibPD.SendFloat ("WindLop", transformControly);
+
+
+	}
+
+	public void SendRainLopValue(float transformControly){
+
+		LibPD.SendFloat ("RainLop", transformControly);
+
+
+	}
+
+	public void SendShorePanValue(float transformControlx){
+
+		LibPD.SendFloat ("ShorePan", transformControlx);
+
+
+	}
+
+	public void SendFirePanValue(float transformControlx){
+
+		LibPD.SendFloat ("FirePan", transformControlx);
+
+
+	}
+
+	public void SendFireLopValue(float transformControly){
+
+		LibPD.SendFloat ("FireLop", transformControly);
+
+
+	}
+
+	public void SendFireTrValue(float transformControly){
+
+		LibPD.SendFloat ("FireTransform", transformControly);
+
 
 	}
 

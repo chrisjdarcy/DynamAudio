@@ -4166,6 +4166,7 @@ GameObject:
   - 92: {fileID: 1752023810}
   - 124: {fileID: 1752023809}
   - 81: {fileID: 1752023808}
+  - 114: {fileID: 1752023813}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4241,6 +4242,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1752023813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1752023807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048e0c9ec8987a14da04498290e7aac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameOfPatch: main
 --- !u!1 &1786214741
 GameObject:
   m_ObjectHideFlags: 0
@@ -4596,6 +4609,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1937495883}
+  - 114: {fileID: 1937495884}
   m_Layer: 0
   m_Name: PDMessenger
   m_TagString: Untagged
@@ -4616,6 +4630,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &1937495884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1937495882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d2be1512d67f84ebac5ad2c8eadc0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2074613483
 GameObject:
   m_ObjectHideFlags: 0

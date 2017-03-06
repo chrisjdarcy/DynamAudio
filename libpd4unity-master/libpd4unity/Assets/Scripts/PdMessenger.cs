@@ -6,35 +6,81 @@ using UnityEngine.UI;
 public class PdMessenger : MonoBehaviour {
 
   
-	float fToggleValue;
+	float playToggleValue;
+	float stormToggleValue;
 
 
+	public void SendMusicValue(float musicValue){
 
-	public void SendSliderValue(float slideValue){
-
-		LibPD.SendFloat ("SliderValue", slideValue);
+		LibPD.SendFloat ("MusicLevel", musicValue);
 
 
 	}
-		
+
+	public void SendWindValue(float windValue){
+
+		LibPD.SendFloat ("WindLevel", windValue);
 
 
-	public void SendToggleValue(bool toggleValue){
+	}
+	public void SendThunderValue(float thunderValue){
 
-		if (toggleValue) { 
+		LibPD.SendFloat ("ThunderLevel", thunderValue);
 
-			fToggleValue = 1f;
+
+	}
+	public void SendRainValue(float rainValue){
+
+		LibPD.SendFloat ("RainLevel", rainValue);
+
+
+	}
+	public void SendShoreValue(float shoreValue){
+
+		LibPD.SendFloat ("ShoreLevel", shoreValue);
+
+
+	}
+	public void SendFireValue(float fireValue){
+
+		LibPD.SendFloat ("FireLevel", fireValue);
+
+
+	}
+
+
+	public void SendPlayValue(bool play){
+
+		if (play) { 
+
+			playToggleValue = 1f;
 		} else {
-			fToggleValue = 0f;
+			playToggleValue = 0f;
 		}
 
-		Debug.Log (fToggleValue);
+		Debug.Log (playToggleValue);
 
-		LibPD.SendFloat ("ToggleValue", fToggleValue);
+		LibPD.SendFloat ("Play", playToggleValue);
 
 
 	}
 
 		
+
+	public void SendStormValue(bool storm){
+
+		if (storm) { 
+
+			stormToggleValue = 1f;
+		} else {
+			stormToggleValue = 0f;
+		}
+
+		Debug.Log (playToggleValue);
+
+		LibPD.SendFloat ("StormToggle", stormToggleValue);
+
+
+	}
 
 }
