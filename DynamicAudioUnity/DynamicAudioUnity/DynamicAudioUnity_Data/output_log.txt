@@ -1,7 +1,7 @@
 Initialize engine version: 5.4.1f1 (649f48bbbf0f)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 9.0c [igdumd32.dll 9.17.10.4229]
+    Version:  Direct3D 9.0c [igdumd32.dll 9.17.10.4459]
     Renderer: Intel(R) HD Graphics 3000
     Vendor:   Intel
     VRAM:     848 MB (via DXGI)
@@ -15,14 +15,14 @@ Platform assembly: C:\Users\Chris\Desktop\DynAudio\DynamAudio\DynamicAudioUnity\
 Loading C:\Users\Chris\Desktop\DynAudio\DynamAudio\DynamicAudioUnity\DynamicAudioUnity\DynamicAudioUnity_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Chris\Desktop\DynAudio\DynamAudio\DynamicAudioUnity\DynamicAudioUnity\DynamicAudioUnity_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Chris\Desktop\DynAudio\DynamAudio\DynamicAudioUnity\DynamicAudioUnity\DynamicAudioUnity_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.173 seconds
+- Completed reload, in  0.261 seconds
 Platform assembly: C:\Users\Chris\Desktop\DynAudio\DynamAudio\DynamicAudioUnity\DynamicAudioUnity\DynamicAudioUnity_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Chris\Desktop\DynAudio\DynamAudio\DynamicAudioUnity\DynamicAudioUnity\DynamicAudioUnity_Data\Managed\System.dll (this message is harmless)
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.215967 ms
+UnloadTime: 0.912534 ms
 Loading patch:C:/Users/Chris/Desktop/DynAudio/DynamAudio/DynamicAudioUnity/DynamicAudioUnity/DynamicAudioUnity_Data/StreamingAssets/PdAssets/main
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
@@ -36,4 +36,4 @@ FileNotFoundException: C:/Users/Chris/Desktop/DynAudio/DynamAudio/DynamicAudioUn
 (Filename:  Line: -1)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1d00 -> priority: 1 
+  Thread -> id: 126c -> priority: 1 

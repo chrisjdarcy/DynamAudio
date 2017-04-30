@@ -5,80 +5,73 @@ using UnityEngine.UI;
 
 public class PdMessenger : MonoBehaviour {
 
-  
-	float playToggleValue;
-	float stormToggleValue;
+	public float thunderToggleValue;
+	public float rainToggleValue;
+	public float windToggleValue;
+	public float fireToggleValue;
 
+	public void SendThunderValue(bool thunder){
 
-	public void SendMusicValue(float musicValue){
+		if (thunder) { 
 
-		LibPD.SendFloat ("MusicLevel", musicValue);
-
-
-	}
-
-	public void SendWindValue(float windValue){
-
-		LibPD.SendFloat ("WindLevel", windValue);
-
-
-	}
-	public void SendThunderValue(float thunderValue){
-
-		LibPD.SendFloat ("ThunderLevel", thunderValue);
-
-
-	}
-	public void SendRainValue(float rainValue){
-
-		LibPD.SendFloat ("RainLevel", rainValue);
-
-
-	}
-	public void SendShoreValue(float shoreValue){
-
-		LibPD.SendFloat ("ShoreLevel", shoreValue);
-
-
-	}
-	public void SendFireValue(float fireValue){
-
-		LibPD.SendFloat ("FireLevel", fireValue);
-
-
-	}
-
-
-	public void SendPlayValue(bool play){
-
-		if (play) { 
-
-			playToggleValue = 1f;
+			thunderToggleValue = 1f;
 		} else {
-			playToggleValue = 0f;
+			thunderToggleValue = 0f;
 		}
 
-		Debug.Log (playToggleValue);
+		Debug.Log (thunderToggleValue);
 
-		LibPD.SendFloat ("Play", playToggleValue);
+		LibPD.SendFloat ("ThunderToggle", thunderToggleValue);
 
 
 	}
 
 		
 
-	public void SendStormValue(bool storm){
+	public void SendRainValue(bool rain){
 
-		if (storm) { 
+		if (rain) { 
 
-			stormToggleValue = 1f;
+			rainToggleValue = 1f;
 		} else {
-			stormToggleValue = 0f;
+			rainToggleValue = 0f;
 		}
 
-		Debug.Log (playToggleValue);
+		Debug.Log (rainToggleValue);
 
-		LibPD.SendFloat ("StormToggle", stormToggleValue);
+		LibPD.SendFloat ("RainToggle", rainToggleValue);
+
+
+	}
+
+	public void SendWindValue(bool wind){
+
+		if (wind) { 
+
+			windToggleValue = 1f;
+		} else {
+			windToggleValue = 0f;
+		}
+
+		Debug.Log (windToggleValue);
+
+		LibPD.SendFloat ("WindToggle", windToggleValue);
+
+
+	}
+
+	public void SendFireValue(bool fire){
+
+		if (fire) { 
+
+			fireToggleValue = 1f;
+		} else {
+			fireToggleValue = 0f;
+		}
+
+		Debug.Log (fireToggleValue);
+
+		LibPD.SendFloat ("FireToggle", fireToggleValue);
 
 
 	}
