@@ -50,6 +50,7 @@
      <Compile Include="Assets\LibPD\LibPDNativeMidi.cs" />
      <Compile Include="Assets\LibPD\LibPdNativeUnity.cs" />
      <Compile Include="Assets\LibPdFilterRead.cs" />
+     <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\PdMessenger.cs" />
      <Compile Include="Assets\PluginUtils.cs" />
  <Reference Include="UnityEngine.UI">
