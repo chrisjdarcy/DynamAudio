@@ -1,0 +1,11 @@
+#N canvas 896 176 568 526 10;
+#X obj 57 73 r SliderValue;
+#X obj 129 355 dac~;
+#X obj 68 156 osc~ 440;
+#X obj 129 323 *~;
+#X obj 148 273 r ToggleValue;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 3 0 1 1;
+#X connect 4 0 3 1;
